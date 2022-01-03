@@ -6,8 +6,8 @@ public class GameMaster{
     GameBoard board;
     int playerNumber;
     List<Player> playerList;
-    int winning_Lap; //Winning_Lap => winning_Lap
-    bool isEnded; // isEnded
+    int winning_Lap; 
+    bool isEnded; 
 
     public GameMaster(int winning_Lap){
         this.winning_Lap = winning_Lap;

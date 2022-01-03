@@ -31,7 +31,7 @@ public class Player{
     public bool Being_In_Jail { get => being_In_Jail; set => being_In_Jail = value; }
     public int Nb_Throw { get => nb_Throw; set => nb_Throw = value; }
 
-    public void Moving(int value){ //Move => Moving
+    public void Moving(int value){ 
         if(position + value <= 39 ){
             position += value;
         }
