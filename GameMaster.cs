@@ -34,7 +34,7 @@ public class GameMaster{
 
         List<Player> playerTemp = new List<Player>();
         foreach(Player player in playerList){
-            playerTemp.Add(player); // playerTemp contient l'ensemble des joueurs
+            playerTemp.Add(player); // playerTemp contains all the players
         }
 
         this.board.Board[0] = playerTemp; //We put every player on the 1st case
@@ -63,7 +63,7 @@ public class GameMaster{
         }
     }
     
-    // Discute avec le joueur, lui dit quoi faire et donne son résultat
+    // Discuss with the player, tell him what to do and show the result (his new position on the board)
     public void Throwing_Player(Player player){ 
         dice.Throw_Dice();
         
@@ -85,7 +85,7 @@ public class GameMaster{
         }
     }
 
-    // Gère le tour d'un joueur (plusieurs lancé de dés potentiel)
+
     public void Managing_Turn(Player player){
         if(player.Being_In_Jail){
             Throwing_Player(player);
@@ -99,7 +99,7 @@ public class GameMaster{
             }else{
                 player.Nb_Throw++;
             }
-            // Si tu n'es pas en prison:
+            // If we're not in jail:
         }else{
             Throwing_Player(player); 
             Moving_Player_On_Board(player); 
@@ -142,18 +142,18 @@ public class GameMaster{
         foreach (KeyValuePair<int, List<Player>> key in this.board.Board)
         {
             if(key.Key == 30){
-                Console.ForegroundColor = ConsoleColor.DarkRed; //DarkRed
+                Console.ForegroundColor = ConsoleColor.DarkRed; 
                 Console.Write("--GO TO JAIL--\n");
                 Console.ResetColor();
             }
             if(key.Key == 10){
-                Console.ForegroundColor = ConsoleColor.Yellow; //jaune
+                Console.ForegroundColor = ConsoleColor.Yellow; 
                 Console.Write("--VISIT ONLY / IN JAIL--\n");
                 Console.ResetColor();
             }
-            Console.ForegroundColor = ConsoleColor.Gray; //Gray
+            Console.ForegroundColor = ConsoleColor.Gray; 
             Console.Write("Position : {0}", key.Key);
-            Console.ForegroundColor = ConsoleColor.DarkBlue; //Rose
+            Console.ForegroundColor = ConsoleColor.DarkBlue; 
             Console.Write("\tPlayer : ");
             Console.ResetColor();
 
@@ -172,12 +172,12 @@ public class GameMaster{
                 }
             }
             if (key.Key == 30){
-                Console.ForegroundColor = ConsoleColor.DarkRed; //DarkRed
+                Console.ForegroundColor = ConsoleColor.DarkRed; 
                 Console.Write("\n--GO TO JAIL--");
                 Console.ResetColor();
             }
             if (key.Key == 10){
-                Console.ForegroundColor = ConsoleColor.Yellow; //jaune
+                Console.ForegroundColor = ConsoleColor.Yellow; 
                 Console.Write("\n--VISIT ONLY / IN JAIL--");
                 Console.ResetColor();
             }
@@ -189,7 +189,7 @@ public class GameMaster{
 
 
     public void End_Game(Player player){
-        Console.WriteLine("\nCongratulations !!\n{0} WON THE GAME !!", player.Name);
+        Console.WriteLine("\nCongratulations !!\n{0} Won The Game!", player.Name);
         this.IsEnded = true;
     }
 }
