@@ -1,13 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-
-// In order to launch the program, you need to enter 
-// the following command : dotnet run
-// Be sure to execute the command in the appropriate directory :
-// the following should be the one : C:\Users\julie\OneDrive\Documents\ESILV\DesignPattern\Monopoly>
-// If it is not already the correct path, use the command 'cd C:\Users\julie\OneDrive\Documents\ESILV\DesignPattern\Monopoly'
-
 namespace Monopoly
 {
     class Program
