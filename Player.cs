@@ -4,9 +4,9 @@ public class Player{
 
     string name;
     int position;
-    int nb_Lap; // nb_Lap
-    bool being_In_Jail; //Being_In_Jail
-    int nb_Throw; // nb_Throw
+    int nb_Lap; 
+    bool being_In_Jail;
+    int nb_Throw;
 
     public Player(){
         Console.Write("Choose a name : ");
